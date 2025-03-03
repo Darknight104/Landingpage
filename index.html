@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARKNIGHT Game World</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-video">
+        <video autoplay loop muted playsinline>
+            <source src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div>
 
     <nav class="navbar">
         <h1>Darknight Game World</h1>
@@ -18,25 +25,47 @@
         </ul>
     </nav>
 
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide fade">
-               <img src="https://tse2.mm.bing.net/th?id=OIP.B-jY42vOT04f71n5yOmO7QHaEo&pid=Api&P=0&h=180" alt="Minecraft">
+    <main class="main-content">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.B-jY42vOT04f71n5yOmO7QHaEo&pid=Api&P=0&h=180" alt="Minecraft">
+                    <div class="slide-content">
+                        <h2>Explore Minecraft</h2>
+                        <p>Build, create, and embark on adventures in blocky worlds.</p>
+                        <a href="#" class="slide-btn">Play Now</a>
+                    </div>
+                </div>
+                <div class="slide video-slide fade">
+                    <video src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_tiny.mp4" controls  autoplay muted></video>
+                    <div class="slide-content">
+                        <h2>Epic Gaming Experience</h2>
+                        <p>Discover the most immersive games in our collection.</p>
+                        <a href="#" class="slide-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.UAkzJulkbWCyXnAixCnKJAHaEK&pid=Api&P=0&h=180" alt="PUBG">
+                    <div class="slide-content">
+                        <h2>PUBG Battlegrounds</h2>
+                        <p>Fight to be the last one standing in this battle royale phenomenon.</p>
+                        <a href="#" class="slide-btn">Join Battle</a>
+                    </div>
+                </div>
             </div>
-            <div class="slide video-slide fade">
-                <video src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_tiny.mp4" controls autoplay muted></video>
-            </div>
-            <div class="slide fade">
-                <img  src="https://tse1.mm.bing.net/th?id=OIP.UAkzJulkbWCyXnAixCnKJAHaEK&pid=Api&P=0&h=180" alt="PUBG">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
             </div>
         </div>
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-    </div>
+    </main>
    
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 Game Landing Page</p>
+            <p>&copy; 2025 DARKNIGHT Game World</p>
             <div class="footer-links">
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -46,6 +75,6 @@
         </div>
     </footer>
 
-    <script src="Script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
